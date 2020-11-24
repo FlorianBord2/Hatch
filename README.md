@@ -1,10 +1,11 @@
-# Hatch
-Hatch is a brute force tool that is used to brute force most websites
+# Hatch (Works in 2020)
+Hatch is a brute force tool that is used to brute force most websites. This version of Hatch has been optimized to work with Python 3.
 
 
 ## Installation Instructions
 ```
 git clone https://github.com/Greatest125/Hatch
+cd Hatch
 python main.py
 ```
 
