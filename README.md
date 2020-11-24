@@ -29,5 +29,5 @@ Select the appropriate driver, unzip the file, and copy the driver to `/bin`
 6). Watch it go!
 
 ## How to use (Video)
-[![IMAGE ALT TEXT](https://i.ytimg.com/vi/Hd_kQVnajxk/1.jpg)](https://vimeo.com/391670156 "Video Title")
+[![Brute-Force Nearly Any Website Login with Hatch](https://i.imgur.com/xdf5oRX.jpg)](https://vimeo.com/391670156 "Brute-Force Nearly Any Website Login with Hatch")
 
