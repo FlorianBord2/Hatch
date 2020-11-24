@@ -15,9 +15,10 @@ pip3 install pyvirtualdisplay
 pip3 install requests
 sudo apt-get install xvfb
 ```
-chrome driver and chrome are also required!
-link to chrome driver: http://chromedriver.chromium.org/downloads
-copy it to bin!
+chrome driver and Google Chrome are also required!
+
+Link to chrome driver: http://chromedriver.chromium.org/downloads
+Select the appropriate driver, unzip the file, and copy the driver to `/bin`
 <br>
 ## How to use (text)
 1). Find a website with a login page<br>
