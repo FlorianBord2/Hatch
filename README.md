@@ -1,4 +1,4 @@
-# Hatch for Python3(Works in 2020)
+# Hatch for Python3 (Works in 2020)
 Hatch is a brute force tool that is used to brute force most websites. This version of Hatch has been optimized to work with Python 3. I have also fixed a problem that occured in FlorianBord2's <a href="https://github.com/FlorianBord2/Hatch-python3-optimised">Hatch-python3-optimised</a> that pasted the username twice in the login form.
 
 
