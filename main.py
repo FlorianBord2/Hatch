@@ -13,8 +13,6 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
-
 
 #Graphics
 class color:
@@ -105,6 +103,7 @@ def brutes(username, username_selector ,password_selector,login_btn_selector,pas
             break
         except selenium.common.exceptions.NoSuchElementException:
             print ('AN ELEMENT HAS BEEN REMOVED FROM THE PAGE SOURCE THIS COULD MEAN 2 THINGS THE PASSWORD WAS FOUND OR YOU HAVE BEEN LOCKED OUT OF ATTEMPTS! ')
+
             print ('LAST PASSWORD ATTEMPT BELLOW')
             print (color.GREEN + 'Password has been found: {0}'.format(line))
             print (color.YELLOW + 'Have fun :)')
