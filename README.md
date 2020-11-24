@@ -4,15 +4,15 @@ Hatch is a brute force tool that is used to brute force most websites
 
 ## Installation Instructions
 ```
-git clone https://github.com/MetaChar/Hatch
-python2 main.py
+git clone https://github.com/Greatest125/Hatch
+python main.py
 ```
 
 ## Requirements
 ```
-pip2 install selenium
-pip2 install pyvirtualdisplay
-pip2 install requests
+pip3 install selenium
+pip3 install pyvirtualdisplay
+pip3 install requests
 sudo apt-get install xvfb
 ```
 chrome driver and chrome are also required!
