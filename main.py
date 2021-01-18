@@ -80,10 +80,10 @@ def wizard():
 
 def brutes(username, username_selector ,password_selector,login_btn_selector,pass_list, website):
     f = open(pass_list, 'r')
-    optionss = webdriver.ChromeOptions()
+    optionss = webdriver.FirefoxOptions()
     optionss.add_argument("--disable-popup-blocking")
     optionss.add_argument("--disable-extensions")
-    browser = webdriver.Chrome(chrome_options=optionss)
+    browser = webdriver.firefox(firefox_options=optionss)
     wait = WebDriverWait(browser, 10)
     while True:
         try:
@@ -113,7 +113,7 @@ banner = color.BOLD + color.RED +'''
  | |  | |     | |     | |
  | |__| | __ _| |_ ___| |__
  |  __  |/ _` | __/ __| '_ \\
- | |  | | (_| | || (__| | | |
+ | |  | | (_| | || (__| | | |x
  |_|  |_|\__,_|\__\___|_| |_|
   {0}[{1}-{2}]--> {3}V.1.0
   {4}[{5}-{6}]--> {7}coded by Metachar
